@@ -12,6 +12,7 @@ import { BodyUserComponent } from './frontOffice/body-user/body-user.component';
 import { HeaderUserComponent } from './frontOffice/header-user/header-user.component';
 import { FooterUserComponent } from './frontOffice/footer-user/footer-user.component';
 import { AllTemplateUserComponent } from './frontOffice/all-template-user/all-template-user.component';
+import { DashbordComponent } from './dashbord/dashbord.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { AllTemplateUserComponent } from './frontOffice/all-template-user/all-te
     BodyUserComponent,
     HeaderUserComponent,
     FooterUserComponent,
-    AllTemplateUserComponent
+    AllTemplateUserComponent,
+    DashbordComponent
   ],
   imports: [
     BrowserModule,

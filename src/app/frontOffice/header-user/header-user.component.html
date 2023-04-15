@@ -1,17 +1,23 @@
 <div class="container d-flex align-items-center">
 
-    <h1 class="logo me-auto"><a href="index.html">ESPRIT</a></h1>
+    <h1 class="logo me-auto"></h1>
+    <img src="assets/front/assets/img/a.png" width="70">
     <!-- Uncomment below if you prefer to use an image logo -->
     <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
     <nav id="navbar" class="navbar order-last order-lg-0">
       <ul>
-        <li><a class="active" href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="courses.html">Courses</a></li>
-        <li><a href="trainers.html">Trainers</a></li>
-        <li><a href="events.html">Events</a></li>
-        <li><a href="pricing.html">Pricing</a></li>
+        <li><a class="active" href="index.html">ESPRIT</a></li>
+        <li><a href="about.html">ADDMISSION</a></li>
+        <li><a href="courses.html">FORMATION</a></li>
+        <li><a [routerLink]="['/user/dashbord']">EVENTS</a></li>
+        <li><a href="events.html">EVALUATION</a></li>
+        <li class="dropdown"><a href="pricing.html"><span>INTERNATIONNAL</span><i class="bi bi-chevron-down"></i></a>
+          <ul>
+            <li><a href="#">PARTENARIAT</a></li>
+          
+          </ul>
+         </li>
 
         <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
           <ul>
