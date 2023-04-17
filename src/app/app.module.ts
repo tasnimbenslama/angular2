@@ -13,6 +13,8 @@ import { HeaderUserComponent } from './frontOffice/header-user/header-user.compo
 import { FooterUserComponent } from './frontOffice/footer-user/footer-user.component';
 import { AllTemplateUserComponent } from './frontOffice/all-template-user/all-template-user.component';
 import { DashbordComponent } from './dashbord/dashbord.component';
+import {HttpClientModule} from "@angular/common/http";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -26,11 +28,13 @@ import { DashbordComponent } from './dashbord/dashbord.component';
     HeaderUserComponent,
     FooterUserComponent,
     AllTemplateUserComponent,
-    DashbordComponent
+    DashbordComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
