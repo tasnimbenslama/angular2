@@ -1,0 +1,57 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<div style="text-align: center">
+    <h1>{{message}}</h1>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <form>
+                <fieldset>
+       <h1>ASSIGNEMENT OF TEAMS </h1>
+                  
+                </fieldset>
+            </form><!-- ends register form -->
+            <!-- second for to fiter user-->
+        </div><!-- ends col-6 -->
+        
+        <div>
+            <!-- Display the list of user IDs -->
+            <div>
+                <!-- Display the list of user IDs -->
+                
+                  <form (ngSubmit)="assignEventToAllTeams(id,team.idT)">
+                    <label>
+                     team ID:
+                      <input type="number" [(ngModel)]="team.idT" name="teamId">
+                    </label>
+                    <label>
+                        User ID:
+                        <input type="number" [(ngModel)]="id" name="userId">
+                      </label>
+               
+                    <button   class="btn btn-success"  type="submit" >Participer</button>
+                </form>
+               
+                <h1>Création des équipes</h1>
+<button (click)="createTeams()">Créer les équipes</button>
+
+<hr>
+
+<h1>Liste des équipes</h1>
+<button (click)="affiche()" >Récupérer les équipes</button>
+
+
+  <li *ngFor="let team of teams">
+    <td>{{team.name}}</td>
+
+  </li>
+          </div>
+    </div>
+</div>
+
+
+

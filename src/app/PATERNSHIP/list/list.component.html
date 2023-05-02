@@ -1,0 +1,16 @@
+<h2 class="center">PATTERNSHIP LIST</h2>
+<div class="container" *ngFor="let patern of paterns">
+    <div class="card-group"  center style="width: 18rem;">
+        <img class="card-img-top" src="assets/front/assets/img/about.jpg" alt="Card image cap">
+        
+        <div class="card-body">
+          <h5 class="card-title">{{patern.name}}</h5>
+          <h5 class="card-title">{{patern.thematics}}</h5>
+
+
+          
+          <button class="btn btn-primary"  >Like</button>
+            
+        </div>
+      </div>
+</div>

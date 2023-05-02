@@ -1,0 +1,12 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="download-container">
+
+<button  (click)="generatePdf()"><i class="fa fa-download"></i>Download PDF</button>
+
+</div>
+<button class="btn btn-success btn-space" (click)="effectuerAffectation()">Assign users to teams</button>
+
+<br>
+<div> 
+    <strong style="color: green;" *ngIf="ajout">{{message}}</strong>
+  </div>

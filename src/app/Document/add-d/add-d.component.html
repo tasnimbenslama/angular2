@@ -1,0 +1,15 @@
+<input type="file" (change)="onFileSelected($event)">
+    <button (click)="uploadFile()">Upload</button>
+    <br>
+    <form (ngSubmit)="assignEventToAllTeams(document.id,id1)">
+        <label>
+         ProjectID:
+          <input type="number" [(ngModel)]="document.id" name="ProjectID">
+        </label>
+        <label>
+            Document ID:
+            <input type="number" [(ngModel)]="id1" name="DocumentID">
+          </label>
+   
+        <button   class="get-started-btn"  type="submit" >Participer</button>
+    </form>

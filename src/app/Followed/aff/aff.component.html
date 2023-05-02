@@ -1,0 +1,12 @@
+WINNER PROJECT IS:
+
+<div *ngIf="project">
+    <h1>{{ project.id }}</h1>
+    <h1>{{ project.name }}</h1>
+    <!-- Affiche d'autres détails du projet ici -->
+  </div>
+  
+  <div *ngIf="!project">
+    <p>Aucun projet trouvé.</p>
+  </div>
+  

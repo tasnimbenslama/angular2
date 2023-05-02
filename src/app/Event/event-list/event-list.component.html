@@ -1,0 +1,164 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+<strong style="color: red;"></strong>
+<div *ngIf="affichageAff">
+  <strong style="color: green;" >{{messageAffectation}}</strong>
+</div>
+<br>
+ 
+ <div class="container">
+   <div class="row">
+     <div class="col-lg-12">
+       <div class="main-box clearfix">
+         <div class="table-responsive">
+           <h5 style="color: brown; font-weight: bold;">les Contrats :</h5>
+
+
+
+           <div class="container">
+            <a class="btn btn-success btn-space" [routerLink]="['/admin/app-add-event']">Ajouter</a>
+            <a type="button" class="btn btn-primary btn-space" href="http://localhost:8075/app0/contrat/export/pdf">Extraire</a>
+            <a type="button" class="btn btn-info btn-space" >Statistiques</a>
+          </div>
+
+          <br>
+
+          
+          <section [hidden]="hideS">
+            
+              <select  [(ngModel)]="location">
+                <option>Nombre de contrats valides</option>
+                <option>Chiffre affaire</option>
+              </select>
+
+
+            <div class="row justify-content-md-center">
+              <div class="col col-md-6">
+                Date de début:
+                <input
+                type="date"
+                class="form-control champ"
+                placeholder="Date de début"
+                [(ngModel)]="name"
+                />
+                Date de Fin :
+                <input
+                type="date"
+                class="form-control champ"
+                placeholder="Date de fin"
+                [(ngModel)]="budget"
+                />
+                <button >Envoyer</button>
+              </div>
+              <div class="col col-md-6 justify-content-start textStat">{{messageStat}}{{nbrV}}</div>
+          
+            </div>
+        </section>
+
+          
+           
+
+
+          
+          
+
+
+
+
+
+ 
+           <table class="table user-list">
+             <thead style="background-color:rgb(247, 237, 224);">
+               <tr style="border-color:gainsboro;">
+                 <th><span>id Contrat</span></th>
+                 <th class="text-center"><span>Date debut de contrat </span></th>
+                 <th class="text-center"><span>Date Fin de contrat </span></th>
+                 <th class="text-center"><span>Spécialité  </span></th>
+                 <th class="text-center"><span>Montant de contrat </span></th>
+                 <th class="text-center"><span>Archive </span></th>
+                 <th>Actions</th>
+                   Search
+                   <select [(ngModel)]="materials" >
+                    <option>id</option>
+                    <option>Specialite</option>
+                   </select>
+                   
+                 
+
+
+                    <input
+                      type="number"
+                      class="form-control"
+                      placeholder="Search by"
+                    />
+                    <div class="input-group-append">
+                      <button
+                        class="btn btn-outline-secondary"
+                        type="button"
+                        
+                      >
+                        Search
+                      </button>
+                    </div>
+              
+                  <div class="input-group-append">
+                    <button
+                      class="btn btn-outline-secondary"
+                      type="button"
+                      
+                    >
+                      Search
+                    </button>
+                  </div>
+             
+
+
+               
+             <tbody *ngFor="let c of contratList">
+                 
+                
+                 <td class="text-center">
+                   <span class="label label-default">{{c.name}}</span>
+                 </td>
+                
+                  <span class="label label-default" > {{c.budget}} </span>
+                 <td class="btn-group">
+                   <button type="button" class="btn btn-outline-danger" >Supprimer</button>
+                   <button type="button" class="btn btn-outline-success"  >Affecter</button>
+                 </td>
+                 <td [hidden]="hide">
+                   <input
+                   type="text"
+                   class="form-control"
+                   placeholder="Nom de l'etudiant à affecter au contrat"
+                   [(ngModel)]="name"
+                    />
+                   <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Prenom de l'etudiant à affecter au contrat"
+                    [(ngModel)]="prenomE"
+                    />
+                    <button >OK</button>
+                 </td>
+                   
+                 
+               
+             </tbody>
+
+
+          
+
+
+
+      
+     
+   
+ 
+ 

@@ -1,0 +1,64 @@
+
+
+<form (ngSubmit)="assignEventToAllTeams(thematique.idTH,idEv)">
+    <label>
+     theme ID:
+      <input type="number" [(ngModel)]="thematique.idTH" name="teamId">
+    </label>
+    <label>
+        Event ID:
+        <input type="number" [(ngModel)]="idEv" name="userId">
+      </label>
+
+    <button   class="btn btn-success"  type="submit" >Participer</button>
+</form>
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+
+<div class="container">
+    <div class="row">
+               <div id="custom-search-input">
+                                <div class="input-group col-md-12" style="text-align: center">
+                                    <input type="text" class="search-query form-control" placeholder="Search With NAME"  name="email" />
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-danger" type="button">
+                                            <span class=" glyphicon glyphicon-search"></span>
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+    </div>
+    </div>
+<div class="container">
+<div class="container">
+    <div class="row col-md-6 col-md-offset-2 custyle">
+    <table class="table table-striped custab">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+           
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let event of thematiques">
+            <td>{{event.idTH}}</td>
+            <td>{{event.name}}</td>
+           
+
+            
+          </tr>
+         
+    </tbody>
+    </table> 
+   
+  
+    </div>
+  
+
+</div>
+
+
