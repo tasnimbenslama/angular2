@@ -10,12 +10,16 @@
         <li><a class="active" href="index.html">ESPRIT</a></li>
         <li><a href="about.html">ADDMISSION</a></li>
         <li><a href="courses.html">FORMATION</a></li>
-        <li><a [routerLink]="['/user/dashbord']">EVENTS</a></li>
-        <li><a href="events.html">EVALUATION</a></li>
-        <li class="dropdown"><a href="pricing.html"><span>INTERNATIONNAL</span><i class="bi bi-chevron-down"></i></a>
+        <li class="dropdown"><a ><span>EVENTS</span><i class="bi bi-chevron-down"></i></a>
           <ul>
-            <li><a href="#">PARTENARIAT</a></li>
-          
+            <li><a [routerLink]="['/user/app-add-project']">APP0</a></li>
+            <li><a [routerLink]="['/user/AffComponent']">Result</a></li>
+          </ul>
+         </li>
+        <li><a href="events.html">EVALUATION</a></li>
+        <li class="dropdown"><a ><span>INTERNATIONNAL</span><i class="bi bi-chevron-down"></i></a>
+          <ul>
+            <li><a [routerLink]="['/user/app-list']">PARTENARIAT</a></li>
           </ul>
          </li>
 
