@@ -1,0 +1,37 @@
+<h4 class="text-center pt-2">ADD YOUR COMPLAINT</h4>
+<div class="container-fluid center offset-3">
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card w-50">
+        <div class="card-header w-100">
+          <h4>COMPLAINT FORM</h4>
+        </div>
+        <div class="card-body">
+<form (ngSubmit)="onSubmit(complaintForm)" #complaintForm="ngForm">
+
+    <div class="mb-3 w-100">
+    <label class="form-label" for="complainantName">Complainant Name:</label>
+    <input class="form-control" type="text" id="complainantName" name="complainantName" [(ngModel)]="complaint.complainantName"required #complainantNameInput="ngModel">
+    <div *ngIf="complainantNameInput.invalid && complainantNameInput.touched" class="text-danger">
+        {{complainantNameError}}
+    </div>
+</div>
+    <div class="mb-3 w-100">
+    <label class="form-label" for="complainantContact">Complainant Contact:</label>
+    <input class="form-control" type="text" id="complainantContact" name="complainantContact" [(ngModel)]="complaint.complainantContact"required #complainantContactInput="ngModel">
+    <div *ngIf="complainantContactInput.invalid && complainantContactInput.touched" class="text-danger">
+        {{complainantContactError}}
+    </div>
+</div>
+
+<div class="mb-3 w-100">
+    <label class="form-label" for="complaintDetails">Complaint Details:</label>
+    <textarea class="form-control" type="text" id="complaintDetails" name="complaintDetails" [(ngModel)]="complaint.complaintDetails"required #complaintDetailsInput="ngModel"></textarea>
+        <div *ngIf="complaintDetailsInput.invalid && complaintDetailsInput.touched" class="text-danger">
+            {{complaintDetailsError}}
+        </div>
+
+</div>
+    <button class="btn btn-success"  type="submit">Submit Complaint</button>
+  </form>

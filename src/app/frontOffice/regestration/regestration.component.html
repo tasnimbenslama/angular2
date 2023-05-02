@@ -1,0 +1,38 @@
+
+<style>
+    .tb { border-collapse: collapse; }
+    .tb th, .tb td { padding: 5px; border: solid 1px #777; }
+    .tb th { background-color: lightblue; }
+  </style>
+  <h1>Registrations</h1>
+ <table class="tb" style="width:300px;">
+  <tr>
+    <th>first_name</th>
+    <th>last_name</th>
+    <th>email</th>
+    <th>level</th>
+    <th>academic_year</th>
+    <th>confirmation</th>
+    <th>payment</th>
+    <th>actions</th>
+  </tr>
+  <tr *ngFor="let i of regest">
+    <td> {{i.first_name}}</td>
+    <td> {{i.last_name}}</td>
+    <td> {{i.email}}</td>
+    <td> {{i.level}}</td>
+    <td> {{i.academic_year}}</td>
+    <td> {{i.confirmation}}</td>
+    <td> {{i.payment}}</td>
+    <td>
+      <button (click)="deleteRegistriation(i.id_reg)">Supprimer</button>
+      <a class="btn btn-primary me-2" routerLink="/admin/edit-registration/{{i.id_reg}}">Modifier</a>
+    </td>
+  </tr>
+</table>
+
+
+
+
+
+

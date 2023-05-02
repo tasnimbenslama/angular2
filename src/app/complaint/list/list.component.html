@@ -1,0 +1,30 @@
+
+<style>
+    .tb { border-collapse: collapse; }
+    .tb th, .tb td { padding: 5px; border: solid 1px #777; }
+    .tb th { background-color: lightblue; }
+  </style>
+  <h1>Complaints List</h1>
+ <table class="tb" style="width:300px;">
+  <tr>
+    <th>ID</th>
+    <th>complaintDate</th>
+    <th>complainantName</th>
+    <th> complainantContact</th>
+    <th> complaintDetails</th>
+  </tr>
+
+  <tr *ngFor="let i of complaints">
+    <td>{{i.id}}</td>
+    <td> {{i.complaintDate}}</td>
+    <td> {{i.complainantName}}</td>
+    <td>{{i.complainantContact}}</td>
+    <td>{{i.complaintDetails}}</td>
+  </tr>
+</table>
+
+
+
+
+
+

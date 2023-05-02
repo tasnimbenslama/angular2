@@ -1,0 +1,106 @@
+<h4 class="text-center pt-2">Ajout Admission</h4>
+<div class="container-fluid center offset-3">
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card w-50">
+        <div class="card-header w-100">
+          <h4>Ajout Admission</h4>
+        </div>
+        <div class="card-body">
+          <form #f="ngForm" (ngSubmit)="onSubmit()">
+            <div class="mb-3 w-100">
+              <label class="form-label">First Name</label>
+              <input type="text" class="form-control" name="first_name" [(ngModel)]="Admission.first_name" required #firstNameInput="ngModel">
+              <div *ngIf="firstNameInput.invalid && firstNameInput.touched" class="text-danger">
+                {{firstNameError}}
+
+              </div>
+            </div>
+
+            <div class="mb-3 w-100">
+              <label class="form-label">Last Name</label>
+              <input type="text" class="form-control" name="last_name" [(ngModel)]="Admission.last_name"required #lastNameInput="ngModel">
+              <div *ngIf="lastNameInput.invalid && lastNameInput.touched" class="text-danger">
+               {{lastNameError}}
+             </div>
+            </div>
+
+            <div class="mb-3 w-100">
+              <label class="form-label">Email</label>
+              <input type="email" class="form-control" name="email" [(ngModel)]="Admission.email" #emailInput="ngModel" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+              <div *ngIf="emailInput.invalid && emailInput.touched" class="text-danger">
+                {{emailError}}
+            </div>
+          </div>
+
+            <div class="mb-3 w-100">
+              <label class="form-label">Date of Birth</label>
+              <input type="date" class="form-control" name="date_of_birth" [(ngModel)]="Admission.date_of_birth">
+            </div>
+
+          <div class="mb-3 w-100">
+          <label class="form-label">Sex</label>
+          <select class="form-select" [(ngModel)]="Admission.sex" name="sex" required>
+            <option value="" disabled selected>Select gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Female">Other</option>
+          </select>
+        </div>
+
+
+     <div class="mb-3 w-100">
+        <label class="form-label">level</label>
+        <input type="text"   class="form-control"  name="level" [(ngModel)]="Admission.level" #last="ngModel">
+
+     </div>
+     <div class="mb-3 w-100">
+        <label class="form-label">Payment</label>
+        <select class="form-select" [(ngModel)]="Admission.payment" name="payment">
+          <option *ngFor="let option of optionsConfirmations" [value]="option.value">{{ option.label }}</option>
+        </select>
+
+     </div>
+     <div class="mb-3 w-100">
+        <label class="form-label">Medical Document</label>
+        <input type="file" class="form-control"  required name="medical_document" [(ngModel)]="Admission.medical_document" >
+
+     </div>
+
+     <div class="mb-3 w-100">
+        <label class="form-label">Image</label>
+        <input type="file" class="form-control" [(ngModel)]="Admission.image"  name="image">
+     </div>
+     <div class="mb-3 w-100">
+      <label class="form-label">Confirmation</label>
+      <select class="form-select" [(ngModel)]="Admission.confirmation" name="confirmation">
+        <option *ngFor="let option of optionsConfirmation" [value]="option.value">{{ option.label }}</option>
+      </select>
+     </div>
+     <div class="mb-3 w-100">
+        <label class="form-label">Field</label>
+        <input type="text" class="form-control" [(ngModel)]="Admission.field"  name="field">
+     </div>
+     <div class="mb-3 w-100">
+        <label class="form-label">Academic Year</label>
+        <input type="text" class="form-control" [(ngModel)]="Admission.academic_year"  name="academic_year">
+     </div>
+     <div class="mb-3 w-100">
+      <label class="form-label" for="field">Speciality :</label>
+      <select id="field" name="field" [(ngModel)]="Admission.speciality" class="form-select form-select-sm">
+        <option *ngFor="let option of options" [value]="option.value">{{ option.label }}</option>
+      </select>
+     </div>
+     <div class="mb-3 w-100">
+        <label class="form-label" for="field">Group</label>
+        <select id="field" name="field" [(ngModel)]="Admission.groupe" class="form-select form-select-sm">
+          <option *ngFor="let option of groups" [value]="option.value">{{ option.label }}</option>
+        </select>
+     </div>
+        <div class="mb-3 w-100">
+            <input class="btn btn-success" [disabled]="f.invalid" type="submit" value="Enregistrer" >
+    </div>
+
+
+</form>
